@@ -94,13 +94,13 @@ public class DrawPanel extends JComponent {
 
                     if (value != currentSnakeDirection) {
                         if (value == Constants.SNAKE_DIRECTION_UP && currentSnakeDirection != Constants.SNAKE_DIRECTION_DOWN) {
-                            GameDataManager.getInstance().setNewSnakeDirection(value);
+                            GameDataManager.getInstance().setCurrentSnakeDirection(value);
                         } else if (value == Constants.SNAKE_DIRECTION_DOWN && currentSnakeDirection != Constants.SNAKE_DIRECTION_UP) {
-                            GameDataManager.getInstance().setNewSnakeDirection(value);
+                            GameDataManager.getInstance().setCurrentSnakeDirection(value);
                         } else if (value == Constants.SNAKE_DIRECTION_LEFT && currentSnakeDirection != Constants.SNAKE_DIRECTION_RIGHT) {
-                            GameDataManager.getInstance().setNewSnakeDirection(value);
+                            GameDataManager.getInstance().setCurrentSnakeDirection(value);
                         } else if (value == Constants.SNAKE_DIRECTION_RIGHT && currentSnakeDirection != Constants.SNAKE_DIRECTION_LEFT) {
-                            GameDataManager.getInstance().setNewSnakeDirection(value);
+                            GameDataManager.getInstance().setCurrentSnakeDirection(value);
                         }
                     }
                 }

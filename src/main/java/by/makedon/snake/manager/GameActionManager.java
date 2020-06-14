@@ -50,7 +50,6 @@ public final class GameActionManager implements ActionListener {
             return;
         }
 
-        GameDataManager.getInstance().updateSnakeDirection();
         GameWindowManager.getInstance().repaint();
     }
 
