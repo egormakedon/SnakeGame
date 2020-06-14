@@ -31,6 +31,7 @@ public final class GameDataManager {
     private Snake snake;
     private Apple apple;
     private int currentSnakeDirection;
+    private int newSnakeDirection;
 
     private GameDataManager() {
     }
@@ -65,6 +66,10 @@ public final class GameDataManager {
                 .findAny();
     }
 
+    public void updateSnakeDirection() {
+        currentSnakeDirection = newSnakeDirection;
+    }
+
     public int getWidth() {
         return width;
     }
@@ -89,8 +94,8 @@ public final class GameDataManager {
         return currentSnakeDirection;
     }
 
-    public void setCurrentSnakeDirection(int currentSnakeDirection) {
-        this.currentSnakeDirection = currentSnakeDirection;
+    public void setNewSnakeDirection(int newSnakeDirection) {
+        this.newSnakeDirection = newSnakeDirection;
     }
 
     private static List<Integer> loadSnakeStartPosition() {
@@ -184,5 +189,6 @@ public final class GameDataManager {
 
     private void createSnakeDirection() {
         currentSnakeDirection = snakeStartDirection;
+        newSnakeDirection = snakeStartDirection;
     }
 }
